@@ -40,6 +40,11 @@ class DBDocument:
         if nombre_coleccion in self.colecciones:
             del self.colecciones[nombre_coleccion]
 
+    def eliminar_coleccion(self, nombre_coleccion: str) -> None:
+        if nombre_coleccion in self.colecciones:
+            del self.colecciones[nombre_coleccion]
+            
+
     def obtener_coleccion(self, nombre_coleccion:str) -> Collection | None:
         return self.colecciones.get(nombre_coleccion, None)
     
